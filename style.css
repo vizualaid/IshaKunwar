@@ -121,13 +121,20 @@
         margin-top: 12%;
         font-size: 30px;
         margin-left: 40px;
+       
+    }
+    .ityped{
+        padding-bottom: 5px;
+
     }
     .header-text h1{
         margin-top: 20px;
         font-size: 60px; 
+        padding-bottom: 5px;
     }
     .header-text h1 span{
         color: #ecb547;
+        font-size: 60px; 
     }
     #about{
         /* padding: 80px 0; */
