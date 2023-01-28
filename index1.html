@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Isha Kunwar Portfolio</title>
+</head> -->
+<body>
+    <div class="header" >
+        
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo"> -->
+              
+                <ul >
+                    <li ><a href="#">Home</a></li>
+                    <li ><a href="#">About</a></li>
+                    <li ><a href="#">Services</a></li>
+                    <li ><a href="#">Portfolio</a></li>
+                    <li ><a href="#">Contact</a></li>
+                </ul>
+                
+
+            </nav>
+            <div>
+                <img src="images/f2.png" class="s" alt="float">
+            </div>
+
+            <div class="header-text" >
+                
+                <p>Web Developer</p>
+                <h1>Hello!
+                    <!-- Namaste -->
+                    <br>I'm <span>Isha </span>Kunwar<br>
+                    
+                </h1>
+                <p>From Uttarakhand, India</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- ......................about........................ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> "As a Computer Science and Engineering student, I have a passion for coding and design. 
+                        <!-- My interests include creating designs using tools like Photoshop, Illustrator, and Adobe XD.  -->
+                        My studies have provided me with valuable experience in website development, including the use of HTML, CSS, JavaScript, Bootstrap, and Tailwind.
+
+                         <!-- My strong background in computer science has also allowed me to  -->
+                          I have also work on projects using Angular and React js, as well as gain experience in creating UX-UI wireframes for websites. 
+                         <!-- I am highly motivated to continue learning and growing in the field of design and technology and am excited to contribute my skills to new projects and challenges. -->
+                         Combining my technical skills and design passion, I am dedicated to creating engaging and user-friendly websites that deliver exceptional results."
+                    </p>
+                <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certification')" >Certification</p>
+                </div>
+
+                
+                    <!--  -->
+                    <!-- Experence -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Smart India Hackathon (SIH 2022)</span>                                
+                            <br>Frontend Developer, Designer<br>
+                            <!-- <span>Lovely Professional University</span> -->
+                            <br>● Qualified the University Level
+                            <br>● Worked on the Frontend part of the website
+                            <br> in the team by using (HTML, CSS, JavaScript, Bootstrap).
+                            <br>● Handled the team’s graphic work for the team<br> made (UX - UI) XD wireframe of the website.
+                        </li>
+                        <li><span>Aurora <br>(Student Organization Lovely Professional University)</span>                                
+                            <br>Head of Graphic Design, PR and PS Department, Event Management<br>
+                            <!-- <span>Lovely Professional University</span> -->
+                            <br>● Lead the organization’s graphic design department, 
+                            worked as a design artist<br> managing the graphic elements of events
+                            organized by the team.
+                            <br>● Additionally, worked for the PS&PR Dept building my phone call etiquettes and presentation skills.
+                            <br> in the team by using (HTML, CSS, JavaScript, Bootstrap).
+                            <br>● Successfully took part in Event management experience for Online 12-day event for coding enthusiasts.
+                        </li>
+                        <li><span>CodingBlocks LPU <br>(Student Organization Lovely Professional University)</span>                                
+                            <br>Technical Member<br>
+                            <!-- <span>Lovely Professional University</span> -->
+                            <br>● Worked in website building, contributing to different technical components of the website. 
+                            
+                            <br>● maintaining a database of registered participants.
+                            <br>● Successfully organized different Technical , entrepreneurial workshops<br> with famous youtubers and big personalities and
+                            speakers.
+                        </li>
+                    </ul>
+                </div>
+                    <!-- certification -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-Current</span><br>
+                            <!-- <span>2</span><br><span>3</span>-->
+                        Lovely Professional University    </li> 
+                        <li><span>2016-2020</span><br>
+                            <!-- <span>2</span><br><span>3</span>-->
+                        Army Public Schools</li>
+                        <!-- <li><span>Android Development</span><br> -->
+                            <!-- <span>2</span><br><span>3</span>-->
+                            <!-- Android studio-Kotlin / Fluttter   </li> -->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certification">
+                    <ul>
+                        <li><span>2020-Current</span><br>
+                            <!-- <span>2</span><br><span>3</span>-->
+                        Lovely Professional University    </li> 
+                        <li><span>2016-2020</span><br>
+                            <!-- <span>2</span><br><span>3</span>-->
+                        Army Public Schools</li>
+                        <!-- <li><span>Android Development</span><br> -->
+                            <!-- <span>2</span><br><span>3</span>-->
+                            <!-- Android studio-Kotlin / Fluttter   </li> -->
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- ...................... ........................ -->
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablinks.classList.remove("active-link");
+        
+        }
+        // for(tabcontent of tabcontents){
+        //     tabcontents.classList.remove("active-tab");
+        // }
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+</body>
+</html>
