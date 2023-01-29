@@ -13,23 +13,26 @@
 <body>
     <div class="header">
 
-        <div class="container">
+        
 
-            <nav>
+            <nav >
                 <!-- <img src="images/logo.png" class="logo"> -->
 
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                    <!-- <i  class="fas fa-bars" onclick="openmenu()">..</i> -->
                 </ul>
-
-
+            <i  class="fas fa-bars" onclick="openmenu()"></i>
+                
+                
             </nav>
             <div>
-                <img src="images/f2.png" class="s" alt="float">
+                <img src="images/f2.png" class="img" alt="float">
             </div>
 
             <div class="header-text">
@@ -39,7 +42,9 @@
                 <p><span class="ityped"></span></p>
                 <h1>Hello!
                     <!-- Namaste -->
-                    <br>I'm <span>Isha </span>Kunwar<br>
+                    <br>I'm 
+                    <!-- <span>Isha </span> -->
+                    Isha Kunwar<br>
 
                 </h1>
                 <p>From Uttarakhand, India</p>
@@ -47,7 +52,7 @@
             </div>
 
 
-        </div>
+        
 
     </div>
 
@@ -60,24 +65,23 @@
                     <img src="images/user.png" alt="user">
                 </div>
                 <div class="about-col-2">
-                    <h2 class="sub-title">About Me</h2>
-                    <p> As a Computer Science and Engineering student, I have a passion for coding and design.<br>
+                    <h2 class="sub-title sub-title1">About Me</h2>
+                    <p> As a Computer Science and Engineering student, I have a passion for coding and design.
                         <!-- My interests include creating designs using tools like Photoshop, Illustrator, and Adobe XD.  -->
-                        My studies have provided me with valuable experience in website development, including the use
-                        of HTML, CSS, JavaScript, Bootstrap, and Tailwind.
+                         My studies have provided me with valuable experience in website development, including the use
+                        of HTML, CSS, JavaScript, Kotlin, & Cpp.
 
                         <!-- My strong background in computer science has also allowed me to  -->
-                        I have also work on projects using Angular and React js, as well as gain experience in creating
+                        <br>I have also work on projects using Angular and React js, as well as gain experience in creating
                         UX-UI wireframes for websites.
                         <!-- I am highly motivated to continue learning and growing in the field of design and technology and am excited to contribute my skills to new projects and challenges. -->
-                        Combining my technical skills and design passion, I am dedicated to creating engaging and
-                        user-friendly websites that deliver exceptional results."
+                         I am dedicated to creating engaging and user-friendly websites that deliver exceptional results.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                        <!-- <p class="tab-links" onclick="opentab('certification')">Certification</p> -->
                     </div>
                     <!-- <div class="tab-titles">
                         <a href="#skills" class="tab-links active-link" onclick="opentab(this)">Skills</a>
@@ -151,15 +155,19 @@
     <!-- Services -->
     <div id="services">
         <div class="container">
-            <h2 class="sub-title">My Services</h2>
+            <h2 class="sub-title sub-title2 ">My Services</h2>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Development</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
+                    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
                         excepturi quas iure ab at quia nobis facilis voluptates, nihil eaque placeat, similique dolorum
-                        atque alias velit molestias unde?</p>
-                    <a href="">learn more</a>
+                        atque alias velit molestias unde?</p> -->
+                        <p>
+                            I offer professional web development services, utilizing my knowledge and experience in HTML, CSS, JavaScript, Bootstrap, Tailwind, Angular, React js and other technologies. I am dedicated to creating engaging and user-friendly websites that deliver results.
+                        </p>
+                        <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
+               
                 </div>
                 <div>
                     <i class="fa-brands fa-android"></i>
@@ -167,18 +175,23 @@
                         <!-- Android  -->
                         App Development
                     </h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
+                    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
                         excepturi quas iure ab at quia nobis facilis voluptates, nihil eaque placeat, similique dolorum
-                        atque alias velit molestias unde?</p>
-                    <a href="">learn more</a>
+                        atque alias velit molestias unde?</p> -->
+                        <p>
+                            With a strong background in Android development using Android Studio and Kotlin programming, I am well-equipped to create high-performing and visually appealing apps for the Android platform. I also have knowledge in dart and am currently learning flutter, and have made basic projects using it. 
+                        </p>
+                    <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
                 </div>
                 <div>
                     <i class="fa-solid fa-pen-nib"></i>
                     <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
+                    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
                         excepturi quas iure ab at quia nobis facilis voluptates, nihil eaque placeat, similique dolorum
-                        atque alias velit molestias unde?</p>
-                    <a href="">learn more</a>
+                        atque alias velit molestias unde?</p> -->
+                        <p>In addition to web development and app development, I also offer web design services. I have experience using tools like Photoshop, Illustrator, and Adobe XD to create visually stunning designs. I am dedicated to creating designs that are both aesthetically pleasing and user-friendly.</p>
+                        <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
+               
                 </div>
 
 
@@ -190,7 +203,7 @@
     <!-- portfolio -->
     <div id="portfolio">
         <div class="container">
-            <h2 class="sub-title">My Portfolio</h2>
+            <h2 class="sub-title3 sub-title">My Portfolio</h2>
             <div class="project-list">
                 <div class="project">
                     <img src="images/chatapp.gif" alt="Chat Application">
@@ -205,7 +218,7 @@
                             programming language. <br>
                             It uses Firebase as the backend to handle user authentication and real-time messaging.
                         </p>
-                        <a href="https://github.com/vizualaid/ChatApplication-AndroidStudio-Kotlin-Firebase-"><i
+                        <a href="https://github.com/vizualaid/ChatApplication-AndroidStudio-Kotlin-Firebase-/blob/master/README.md#gif"><i
                                 class="fas fa-link"></i></a>
                     </div>
                 </div>
@@ -215,8 +228,8 @@
 
                     <div class="layer">
                         <p class="project-head">
-                            Bharat Darshan <br>
-                            Heritage Exploration Website<br>
+                            <!-- Bharat Darshan <br> -->
+                            Heritage Website<br>
                             (using HTML, CSS, JS, & Bootstrap)
 
                         </p>
@@ -225,14 +238,14 @@
                             that allows visitors to easily purchase tickets and access heritage sites from home through
                             different devices on the web.
                         </p>
-                        <a href=""><i class="fas fa-link"></i></a>
+                        <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
                     </div>
                 </div>
                 <div class="project">
                     <img src="images/work-3.png" alt="Ecommerce website">
                     <div class="layer">
                         <p class="project-head">
-                            Shoplocal <br>
+                            <!-- Shoplocal <br> -->
                             Ecommerce website<br>(using Angular, JSON server API + )
 
                         </p>
@@ -241,13 +254,13 @@
                             logged in, sellers <br>can list, add, and delete products from their inventory. The website
                             also includes a logout feature for sellers to end their session.
                         </p>
-                        <a href=""><i class="fas fa-link"></i></a>
+                        <a href="https://github.com/vizualaid/eCommerce"><i class="fas fa-link"></i></a>
                     </div>
                 </div>
 
 
             </div>
-            <a href="https://github.com/vizualaid" class="btn">More Projects</a>
+            <a href="https://github.com/vizualaid" class="btn btn1">More Projects</a>
 
         </div>
 
@@ -258,17 +271,21 @@
             <div class="row">
                 <div class="contact-left">
                     <h2 class="sub-title">Contact Me</h2>
-                    <p><i class="fas fa-paper-plane"></i> kunwarisha9@gamil.com</p>
+                    <p><i class="fas fa-paper-plane"></i>kunwarisha9@gamil.com</p>
                     <p><i class="fas fa-phone-square-alt"></i> 6395613771</p>
-
+ 
                     <div class="social-icons">
                         <!-- <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a> -->
                         <a href=""><i class="fab fa-twitter-square"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                         <a href=""><i class="fab fa-linkedin"></i></a>
                     </div>
+                    <a class="btn btn2" 
+                    href="images/my-cv.pdf" download>
+                     <!-- href="https://drive.google.com/file/d/1ygMLa0zxO_81eD3H7nCL72piNqD4qx_Z/view?pli=1" -->
+                    Download CV</a>
 
-
+                   
 
                 </div>
 
@@ -278,14 +295,14 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="btn btn3">Submit</button>
                     </form>
                 </div>
-                <a class="btn btn2"
-                    href="https://drive.google.com/file/d/1ygMLa0zxO_81eD3H7nCL72piNqD4qx_Z/view?pli=1">Download CV</a>
-            </div>
+               
+                </div>
         </div>
     </div>
+    <div class="copyright">created with love <i class="fas fa-heart"></i> Isha Kunwar ©  </div>
 
     <script src="https://unpkg.com/ityped@0.0.10"></script>
     <script>
@@ -327,6 +344,23 @@
         //     // Add the active class to the corresponding tab content element
         //     document.querySelector("#" + tabname + "-content").classList.add("active-tab");
         // }
+        // menu
+
+        var sidemeu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            // alert();
+            console.warn("openmenu");
+            sidemeu.style.right="0px" ;
+        
+
+        }
+        
+        function closemenu(){
+            console.warn("closemenu");
+           sidemeu.style.right="-200px" ;
+
+        }
 
     </script>
 </body>
