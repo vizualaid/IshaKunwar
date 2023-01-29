@@ -39,12 +39,14 @@
        width: 80%;
        height:auto; 
        position:absolute;
-       /* left:100px;
-       bottom: 60px; */
+       margin-left:16%;
+       /* 16-23 */
+       margin-top: 2%;
+       /* 2-50 */
        /* left: 16%;
        bottom:-12%; */
-       left: 16%;
-       bottom: -10%;
+       /* left: 16%;
+       bottom: -10%; */
        animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
     }
     @keyframes fadeInFromTop{
@@ -120,7 +122,7 @@
     .header-text{
         margin-top: 12%;
         font-size: 30px;
-        margin-left: 40px;
+        margin-left: 3%;
        
     }
     .ityped{
@@ -138,7 +140,10 @@
     }
     #about{
         /* padding: 80px 0; */
-        padding: 30px 40px;
+        margin-top:80px;
+        margin-left: 3%;
+        /* margin-left: 40px; */
+        /* padding: 30px 40px; */
         color:#ababab;
     }
     .row{
@@ -209,7 +214,8 @@
 
     /* services */
     #services{
-        padding: 30px 40px;
+        margin: 20px;
+        margin-left: 3%;
 
     }
     .services-list{
@@ -260,21 +266,127 @@
 
     /* portfolio */
     #portfolio{
-        padding: 30px 40px;
+        
+        margin: 20px;
+        margin-left: 3%;
+        color: #fff;
     }
-    .work-list{
+    .project-list{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 40px;
         margin-top: 50px;
     }
-    .work{
+    .project{
         border-radius: 10px;
         position: relative;
         overflow: hidden;
     }
-    .work img{
+    .project img{
         width: 100%;
+        /* height: 50%; */
         border-radius: 10px;
         display: block;
+        transition: transform 0.6s;
     }
+    .layer{
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(255, 255, 255, 0.6),#ecb547);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        transition: transform 0.6s;
+        /* transition: height 0.6s; */
+    }
+    .layer{
+        color: #080808;
+    }
+    .layer .project-head{
+        font-weight: 700;
+        font-size: 23px;
+        padding-bottom: 20px;
+        color: #080808;
+        
+    }
+    .layer a{
+        margin-top: 20px;
+        color: #ecb547;
+        font-size: 18px;
+        text-decoration: none;
+        line-height: 60px;
+        width: 60px;
+        /* background-color: #080808;
+        */
+        background-color: rgb(0, 0, 0);
+        border-radius: 60px;
+
+    }
+    .project:hover img{
+        transform: scale(1.2);
+    }
+    .project:hover .layer{
+        height: 100%;
+    }
+    .btn{
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #ecb547;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.5s;
+        }
+        .btn:hover{
+        background: #ecb547;
+        }
+        /* contact */
+        #contact{
+            margin: 20px;
+            margin-left: 3%;
+           
+        }
+        .contact-left{
+            flex-basis: 35%;
+            color: #fff;
+            /* margin-left: 40px; */
+        }
+        .contact-right{
+            
+            flex-basis: 60%;
+        }
+        .contact-left p i{
+            /* color: #ecb547; */
+            margin-right: 15px;
+            font-size: 15px;
+            }
+            .social-icons{
+            margin-top: 30px;
+            }
+            .social-icons a{
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color: #ababab;
+            display: inline-block;
+            transition: transform 0.6s;
+            }
+            .social-icons a:hover{
+                color: #ecb547;
+                transform: translateY(-4px);
+            }
+            .btn .bt2{
+                display: inline-block;
+                background: #ecb547;
+                /* margin-left: -30px; */
+            }
