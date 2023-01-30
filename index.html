@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="#home">
 
         
 
@@ -19,7 +19,7 @@
                 <!-- <img src="images/logo.png" class="logo"> -->
 
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -93,13 +93,13 @@
                         <ul>
                             <li><span>UI/UX</span><br>
                                 <!-- <span>2</span><br><span>3</span>-->
-                                Designing Web/App interface </li>
+                                (Adobe XD) . Designing Web/App interface, wireframes, Prototype </li>
                             <li><span>Web Development</span><br>
                                 <!-- <span>2</span><br><span>3</span>-->
-                                Web App Development </li>
+                                HTML . CSS . JS . Angular . React JS </li>
                             <li><span>Android Development</span><br>
                                 <!-- <span>2</span><br><span>3</span>-->
-                                Android studio-Kotlin / Fluttter </li>
+                                Android studio-Kotlin / Dart-Fluttter </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -165,8 +165,10 @@
                         atque alias velit molestias unde?</p> -->
                         <p>
                             I offer professional web development services, utilizing my knowledge and experience in HTML, CSS, JavaScript, Bootstrap, Tailwind, Angular, React js and other technologies. I am dedicated to creating engaging and user-friendly websites that deliver results.
+                            <br>
+                            More<i style="font-size: 10px; padding-top:5px; padding-left:5px;"   class="fa-solid fa-link link"><a href="https://github.com/vizualaid"> More</a></i>
                         </p>
-                        <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
+                        
                
                 </div>
                 <div>
@@ -180,8 +182,9 @@
                         atque alias velit molestias unde?</p> -->
                         <p>
                             With a strong background in Android development using Android Studio and Kotlin programming, I am well-equipped to create high-performing and visually appealing apps for the Android platform. I also have knowledge in dart and am currently learning flutter, and have made basic projects using it. 
+                            <br>More<i style="font-size: 10px; padding-top:5px; padding-left:5px;" class="fa-solid fa-link link"><a href="https://github.com/vizualaid"> More</a></i>
                         </p>
-                    <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
+                    
                 </div>
                 <div>
                     <i class="fa-solid fa-pen-nib"></i>
@@ -189,8 +192,10 @@
                     <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus perferendis officiis
                         excepturi quas iure ab at quia nobis facilis voluptates, nihil eaque placeat, similique dolorum
                         atque alias velit molestias unde?</p> -->
-                        <p>In addition to web development and app development, I also offer web design services. I have experience using tools like Photoshop, Illustrator, and Adobe XD to create visually stunning designs. I am dedicated to creating designs that are both aesthetically pleasing and user-friendly.</p>
-                        <a href="">more<i style="font-size: 15px; padding:5px;" class="fa-solid fa-link"></i></a>
+                        <p >In addition to web development and app development, I also offer web design services. I have experience using tools like Photoshop, Illustrator, and Adobe XD to create visually stunning designs. I am dedicated to creating designs that are both aesthetically pleasing and user-friendly.
+                         <br>   More<i style="font-size: 10px; padding-top:5px; padding-left:5px;"  class="fa-solid fa-link link"><a href="https://github.com/vizualaid"> More</a></i>
+                        </p>
+                       
                
                 </div>
 
@@ -291,12 +296,13 @@
 
 
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn3">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
                
                 </div>
@@ -363,6 +369,23 @@
         }
 
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby5MAm2Krn40dXUioTMu9UHnCwR7a4VZs9rruFnYCs6LV8KWkGo-vGtkxBhJMMif60/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                }, 4000)
+            form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>
