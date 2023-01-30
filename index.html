@@ -354,18 +354,14 @@
 
         var sidemeu=document.getElementById("sidemenu");
 
-        function openmenu(){
-            // alert();
-            console.warn("openmenu");
-            sidemeu.style.right="0px" ;
-        
+        var sidemeu = document.getElementById("sidemenu");
 
+        function openmenu() {
+        sidemeu.style.width = "600px";
         }
-        
-        function closemenu(){
-            console.warn("closemenu");
-           sidemeu.style.right="-200px" ;
 
+        function closemenu() {
+        sidemeu.style.width = "0px";
         }
 
     </script>

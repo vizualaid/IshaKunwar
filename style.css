@@ -544,18 +544,17 @@
            font-size: 25px;
            cursor: pointer;
        }
-       nav ul{
-           background: #ecb547;
-           position: fixed;
-           top:0;
-           right: 0px;
-           width: 200px;
-           height: 100vh;
-           padding-top:50px;
-           z-index: 2;
-           transition: right 0.6s;
-   
-       }
+       nav ul {
+        background: #ecb547;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+      }
        nav ul li{
            /* display: none; */
            display: block;
