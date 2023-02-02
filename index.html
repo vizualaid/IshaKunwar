@@ -15,11 +15,11 @@
 
         
 
-            <nav >
+            <nav id="navbar" >
                 <!-- <img src="images/logo.png" class="logo"> -->
 
                 <ul id="sidemenu">
-                    <li><a href="#home">Home</a></li>
+                    <li><a class="active" href="/">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -309,7 +309,22 @@
         </div>
     </div>
     <div class="copyright">created with love <i class="fas fa-heart"></i> Isha Kunwar ©  </div>
-
+        <script>
+            var navbar = document.getElementById("navbar")
+            var sidemenu=document.getElementById("sidemenu")
+            var blur=document.getElementById("navbar")
+            
+            window.onscroll=function(){
+                if(window.pageYOffset>=sidemenu.offsetTop){
+                    navbar.classList.add("sticky");
+                    navbar.classList.add("blur");
+                }
+                else{
+                    navbar.classList.remove("sticky");
+                    navbar.classList.remove("blur")
+                }
+            }
+        </script>
     <script src="https://unpkg.com/ityped@0.0.10"></script>
     <script>
         window.ityped.init(document.querySelector('.ityped'), {
