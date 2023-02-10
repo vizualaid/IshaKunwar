@@ -19,7 +19,7 @@
                 <!-- <img src="images/logo.png" class="logo"> -->
 
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#"  class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -39,15 +39,20 @@
 
                 <!-- <p>Web Developer</p> -->
 
-                <p><span class="ityped"></span></p>
-                <h1>Hello!
+                <!-- <p><span class="ityped"></span></p> -->
+               <span class="ityped2"></span>
+                <h1>
+                    <!-- Hello! -->
                     <!-- Namaste -->
-                    <br>I'm 
+                    I'm 
                     <!-- <span>Isha </span> -->
                     Isha Kunwar<br>
 
                 </h1>
                 <p>From Uttarakhand, India</p>
+                <!-- <p>from the beautiful state of Uttarakhand. 
+                    <br>
+                    Where the mountains are so high,<br> they even make your problems seem tiny! </p> -->
 
             </div>
 
@@ -205,6 +210,10 @@
         </div>
 
     </div>
+
+
+
+    
     <!-- portfolio -->
     <div id="portfolio">
         <div class="container">
@@ -329,6 +338,10 @@
     <script>
         window.ityped.init(document.querySelector('.ityped'), {
             strings: ['Web Developer!', 'Android Developer', 'Graphic Designer', 'Web/App Designer '],
+            loop: true
+        })
+        window.ityped.init(document.querySelector('.ityped2'), {
+            strings: ['Hello!', 'नमस्ते', 'こんにちは', 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ '],
             loop: true
         })
         var tablinks = document.getElementsByClassName("tab-links");
