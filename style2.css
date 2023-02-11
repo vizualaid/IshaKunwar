@@ -24,7 +24,7 @@ position: relative;
         background:#ffffff;
         /* color: #000000; */
         min-height: 100vh;
-        overflow-y: auto;
+        /* overflow-y: auto; */
         overflow-x: hidden;
         /* color: black; */
         
@@ -103,10 +103,10 @@ position: relative;
         margin-top: -100px;
         /* bottom:30; */
         left:10;
-        /* transform: scale(1.011); */
+        transform: scale(1.11);
         /* transform: scale(1.1); */
         /* height: auto; */
-        width: 100%;
+        /* width: 100%; */
         pointer-events: none;
 
     }
