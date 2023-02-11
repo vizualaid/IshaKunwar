@@ -24,7 +24,7 @@ position: relative;
         background:#ffffff;
         /* color: #000000; */
         min-height: 100vh;
-        /* overflow-y: auto; */
+       
         overflow-x: hidden;
         /* color: black; */
         
@@ -90,6 +90,7 @@ position: relative;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow: hidden;
     }
     #text{
       position: absolute;
