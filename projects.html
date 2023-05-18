@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: Arial, sans-serif;
+          background: #222;
+          color: #fff;
+      }
+
+      h1 {
+          text-align: center;
+          padding: 20px 0;
+      }
+      
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      
+      .tag-bg{
+        background: #FCB548;
+          border-radius: 10px;
+          padding: 10px;
+          margin: 10px;
+          width: fit-content;
+          display: inline-block;         
+          margin-bottom: 10px;
+          cursor: pointer;
+      }
+
+      .card {
+          width: 300px;
+          margin: 30px;
+          background: #333;
+          border-radius: 10px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          transition: 0.3s;
+      }
+
+      .card:hover {
+          transform: scale(1.05);
+      }
+
+      .card img {
+          width: 100%;
+          object-fit: cover;
+      }
+
+      .card-content {
+          padding: 20px;
+      }
+
+      .card-title {
+          font-size: 24px;
+          margin-bottom: 10px;
+      }
+
+      .card-description {
+          font-size: 16px;
+      }
+
+      #tag-list{
+        display: flex;
+        justify-content: center;       
+      }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #search-input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 16px;
+    }
+
+    #search-button,
+    #reset-button {
+    background-color: #FCB548;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    }
+
+    #search-button:hover,
+    #reset-button:hover {
+    background-color: #f7be68;
+    }
+
+        /* Responsive layout */
+        @media screen and (max-width: 600px) {
+            .card {
+                width: calc(100% - 60px);
+            }
+        }
+        </style>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".card");
+    const filterButtons = document.querySelectorAll('.tag-bg');
+    const searchBar = document.getElementById('search-input');
+
+    cards.forEach(card => {
+        card.addEventListener("mouseover", function() {
+        this.style.boxShadow = "0px 8px 16px rgba(0, 0, 0, 0.5)";
+        });
+        card.addEventListener("mouseout", function() {
+        this.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.3)";
+        });
+    });
+
+    // Add event listeners for tag filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+        // Show all cards by default
+        cards.forEach(card => {
+            card.style.display = 'block';
+        });
+
+        // Get the selected tag
+        const selectedTag = button.textContent.toLowerCase();
+
+        // Hide cards that don't have the selected tag
+        cards.forEach(card => {
+            const tags = card.querySelectorAll('.tag-bg');
+            let hasSelectedTag = false;
+            tags.forEach(tag => {
+            if (tag.textContent.toLowerCase() === selectedTag) {
+                hasSelectedTag = true;
+            }
+            });
+            if (!hasSelectedTag) {
+            card.style.display = 'none';
+            }
+        });
+        });
+    });
+
+    // Add event listener for search bar
+    searchBar.addEventListener('keyup', function(event) {
+        const searchString = event.target.value.toLowerCase();
+
+        // Loop through all cards
+        cards.forEach(card => {
+        let cardHasTag = false;
+        const cardTags = card.querySelectorAll('.tag-bg');
+
+        // Check if card has at least one displayed tag containing the search string
+        cardTags.forEach(tag => {
+            if (tag.style.display !== 'none' && tag.textContent.toLowerCase().includes(searchString)) {
+            cardHasTag = true;
+            }
+        });
+
+        // If card has at least one displayed tag containing the search string, show it; otherwise, hide it
+        if (cardHasTag) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+        });
+    });
+    });
+
+        </script>
+    </head>
+    <body>
+        <h1>Projects</h1>
+        
+        <div class="search-bar">
+        <input type="text" placeholder="Search tags..." id="search-input">
+        <button id="search-button">Search</button>
+        
+        <!-- <button id="reset-button">Reset</button> -->
+        </div>
+
+    <div id="tag-list">
+    <a  class="tag-bg" class="tag-link" data-tag="tag1">Web Development</a>
+    <a  class="tag-bg" class="tag-link" data-tag="tag2">Android Development</a>
+    <a  class="tag-bg" class="tag-link" data-tag="tag3">UX/UI Design</a>
+    <a href="/projects.html"  class="tag-bg" style="text-decoration: none; color: inherit; "  >Reset</a>
+    
+    <!-- <a href="#" class="tag-bg" class="tag-link" data-tag="tag4">All</a> -->
+    </div>
+        
+        <div class="container">
+        <div class="card">
+            <img
+            src="./images/chatapp.gif"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Android Chat Application
+                </h2> 
+
+            <div class="tag">
+                <div class="tag-bg">Android</div>
+                <div class="tag-bg">Kotlin</div>
+                <div class="tag-bg">Firebase</div>
+                </div>
+                <!-- (using Android Studio-Kotlin, Firebase) -->
+            <p class="card-description">
+                ChatApplication is a sample Android application built with Android Studio and the Kotlin programming language.
+                It uses Firebase as the backend to handle user authentication and real-time messaging.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-2.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 2</h2>
+            <div class="tag">
+                <div class="tag-bg">Web Development</div>
+                <div class="tag-bg">Html</div>
+                <div class="tag-bg">Css</div>
+
+                <div class="tag-bg">JavaScript</div>
+                <div class="tag-bg">Bootstrap</div>
+                </div>
+            <p class="card-description">
+                Integer vitae justo egestas nunc commodo commodo eu id enim.
+            </p>
+            </div>
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-3.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 3</h2>
+            <div class="tag">
+                <div class="tag-bg">Web Development</div>
+                <div class="tag-bg">Kotlin</div>
+                <div class="tag-bg">Firebase</div>
+                </div>
+            <p class="card-description">
+                Aenean aliquet nisi vel ex tempus, et lacinia lectus mollis.
+            </p>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-4.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 1</h2>
+            <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            </div>
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-5.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 1</h2>
+            <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            </div>
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-6.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 1</h2>
+            <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            </div>
+        </div>
+        <div class="card">
+            <img
+            src="./images/work-7.png"
+            alt="Project Image"
+            />
+            <div class="card-content">
+            <h2 class="card-title">Project 1</h2>
+            <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>
