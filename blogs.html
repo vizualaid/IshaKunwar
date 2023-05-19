@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Heritage Management Blog</title>
+<style>
+/* Global styles */
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(115, 120, 255, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random');
+  background-size: cover;
+  color: #fff;
+}
+
+/* Header styles */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-item {
+  position: relative;
+  display: inline-block;
+}
+
+.header__menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__menu-item a:hover {
+  color: #007bff;
+}
+
+.header__menu-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  max-width: 200px;
+  padding: 12px 16px;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 999;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+}
+
+.header__menu-item a:hover .dropdown-menu {
+  display: block;
+}
+
+.header__menu-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  /* position: absolute; */
+  background-color: #fff;
+  min-width: 160px;
+  max-width: 200px;
+  padding: 12px 16px;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 999;
+  position: relative;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #000;
+  background-color: #f0f0f0;
+}
+
+.dropbtn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 16px;
+  margin-right: 8px;
+  transition: 0.2s;
+}
+
+.dropbtn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown-content:hover {
+  display: block;
+}
+
+.header__social-links a {
+  display: inline-block;
+  margin-left: 20px;
+  color: #333;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__social-links a:hover {
+  color: #007bff;
+}
+
+.header__search-box form {
+  display: flex;
+  align-items: center;
+}
+
+.header__search-box input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  background-color: #f2f2f2;
+  margin-right: 10px;
+}
+
+.header__search-box button[type="submit"] {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+  .header__search-box button[type="submit"]:hover {
+    transform: scale(1.1);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    width: 100%;
+    padding: 50px;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  article p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  .categories {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .category {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    background: rgba(255, 255, 255, 0.8);
+padding: 20px;
+text-align: center;
+}
+
+  footer p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header__logo {
+      margin-bottom: 20px;
+    }
+
+    .header__nav {
+      margin-top: 20px;
+    }
+
+    .header__menu {
+      display: none;
+    }
+
+    .dropdown-menu {
+      position: static;
+      display: block;
+      width: 100%;
+    }
+
+    .header__social-links {
+      margin-top: 20px;
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .category {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+<div class="header__logo">
+<img src="https://via.placeholder.com/150x50" alt="Heritage Management Blog Logo" />
+</div>
+
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#">About</a>
+        </li>
+        <li class="header__menu-item">
+            <a href="#">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 2</a></li>
+              <li><a href="#">Category 3</a></li>
+            </ul>
+          </li>
+        <li class="header__menu-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+  
+      <div class="header__social-links">
+        <a href="#">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+  
+      <div class="header__search-box">
+        <form action="#" method="get">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  
+<section>
+  <article>
+    <h2>Blog Post Title Here</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi quis eros ultrices pellentesque sed eu
+      lorem. Nam bibendum libero eget urna eleifend, non tristique magna porttitor. Donec vel nulla suscipit,
+      fermentum nisi a, faucibus quam. Nullam volutpat dictum velit ut commodo. Interdum et malesuada fames ac ante
+      ipsum primis in faucibus.
+    </p>
+
+    <div class="categories">
+      <div class="category">
+        <a href="#">Category 1</a>
+      </div>
+      <div class="category">
+        <a href="#">Category 2</a>
+      </div>
+      <div class="category">
+        <a href="#">Category 3</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2023 Heritage Management Blog. All rights reserved.</p>
+</footer>
+</body>
+</html>

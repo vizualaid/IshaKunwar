@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Themify Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+  <!-- Venobox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+  <!-- Fuse Js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.6.2/fuse.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Slick Slider JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <!-- Venobox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+  <!-- Fuse Js JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.6.2/fuse.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style_blog.css">
+
+  <!-- Custom JS -->
+  <script>
+    // This JavaScript code is optional. It adds some basic interactivity to the website.
+
+    // When the page loads, show the latest post.
+    window.onload = function() {
+      document.getElementById("latest-post").style.display = "block";
+    };
+
+    // When the user clicks on a previous post, show that post.
+    $(".previous-post").on("click", function() {
+      $("#latest-post").hide();
+      $("#" + this.dataset.id).show();
+    });
+  </script>
+</head>
+<body>
+  <header class="bg-white">
+    <h1 class="text-center">My Blog</h1>
+    <nav class="d-flex justify-content-center align-items-center my-3">
+      <a href="#" class="btn btn-link mx-3 font-weight-bold text-dark">Home</a>
+      <a href="#" class="btn btn-link mx-3 font-weight-bold text-dark">About</a>
+      <a href="#" class="btn btn-link mx-3 font-weight-bold text-dark">Contact</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section>
+      <h2>My Latest Post</h2>
+      <article class="card p-3 mb-4">
+        <h3 class="card-title">This is my latest post</h3>
+        <p class="card-text">This is the body of my latest post. It can be about anything I want it to be.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </article>
+      <article id="previous-post-1" class="card p-3 mb-4 previous-post" data-id="previous-post-1">
+        <h3 class="card-title">This is my previous post</h3>
+        <p class="card-text">This is the body of my previous post. It can be about anything I want it to be.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </article>
+      <article id="previous-post-2" class="card p-3 mb-4 previous-post" data-id="previous-post-2">
+<h3 class="card-title">This is another previous post</h3>
+    <p class="card-text">This is the body of another previous post. It can be about anything I want it to be.</p>
+    <a href="#" class="btn btn-primary">Read More</a>
+  </article>
+</section>
+<section>
+  <h2>My Recent Posts</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <article class="card p-3 mb-4">
+        <h3 class="card-title">This is my recent post</h3>
+        <p class="card-text">This is the body of my recent post. It can be about anything I want it to be.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <article class="card p-3 mb-4">
+        <h3 class="card-title">This is another recent post</h3>
+        <p class="card-text">This is the body of another recent post. It can be about anything I want it to be.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <article class="card p-3 mb-4">
+        <h3 class="card-title">This is a third recent post</h3>
+        <p class="card-text">This is the body of a third recent post. It can be about anything I want it to be.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-dark text-light p-3">
+<p class="text-center">My Blog © 2023. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+     <link rel="stylesheet" type="text/css" href="./style.css">
+     <script src="https://kit.fontawesome.com/a576244d6e.js" crossorigin="anonymous"></script>
+     <title>Isha Kunwar Projects</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       * {
@@ -37,38 +40,112 @@
           margin-bottom: 10px;
           cursor: pointer;
       }
-
-      .card {
-          width: 300px;
-          margin: 30px;
-          background: #333;
-          border-radius: 10px;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-          overflow: hidden;
-          transition: 0.3s;
-      }
-
-      .card:hover {
-          transform: scale(1.05);
-      }
-
-      .card img {
-          width: 100%;
-          object-fit: cover;
-      }
-
-      .card-content {
-          padding: 20px;
-      }
-
-      .card-title {
-          font-size: 24px;
+      .filter-tag-bg{
+        font-size: small;
+        background: #FCB548;
+          border-radius: 5px;
+          padding: 5px;
+          margin: 4px;
+          width: fit-content;
+          display: inline-block;         
           margin-bottom: 10px;
+          cursor: pointer;
       }
+      .card {
+  width: 350px;
+  height: auto;
+  margin: 20px;
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+}
 
-      .card-description {
-          font-size: 16px;
-      }
+/* .card:hover {
+  transform: scale(1.05);
+} */
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover .card-description {
+  opacity: 1;
+}
+
+/* card dis */
+.layer{
+        width: 100%;
+        
+        height: 0%;
+        background: linear-gradient(rgba(255, 255, 255, 0.6),#ecb547);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        transition: transform 0.6s;
+        /* transition: height 0.6s; */
+    }
+    .layer{
+        color: #080808;
+    }
+    .layer .project-head{
+        font-weight: 700;
+        font-size: 23px;
+        padding-bottom: 20px;
+        color: #080808;
+        
+    }
+    .layer a{
+        margin-top: 20px;
+        color: #ecb547;
+        font-size: 18px;
+        text-decoration: none;
+        line-height: 60px;
+        width: 60px;
+        /* background-color: #080808;
+        */
+        background-color: rgb(0, 0, 0);
+        border-radius: 60px;
+
+    }
 
       #tag-list{
         display: flex;
@@ -117,7 +194,7 @@
         <script>
     document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
-    const filterButtons = document.querySelectorAll('.tag-bg');
+    const filterButtons = document.querySelectorAll('.filter-tag-bg');
     const searchBar = document.getElementById('search-input');
 
     cards.forEach(card => {
@@ -142,7 +219,7 @@
 
         // Hide cards that don't have the selected tag
         cards.forEach(card => {
-            const tags = card.querySelectorAll('.tag-bg');
+            const tags = card.querySelectorAll('.filter-tag-bg');
             let hasSelectedTag = false;
             tags.forEach(tag => {
             if (tag.textContent.toLowerCase() === selectedTag) {
@@ -163,7 +240,7 @@
         // Loop through all cards
         cards.forEach(card => {
         let cardHasTag = false;
-        const cardTags = card.querySelectorAll('.tag-bg');
+        const cardTags = card.querySelectorAll('.filter-tag-bg');
 
         // Check if card has at least one displayed tag containing the search string
         cardTags.forEach(tag => {
@@ -195,121 +272,426 @@
         </div>
 
     <div id="tag-list">
-    <a  class="tag-bg" class="tag-link" data-tag="tag1">Web Development</a>
-    <a  class="tag-bg" class="tag-link" data-tag="tag2">Android Development</a>
-    <a  class="tag-bg" class="tag-link" data-tag="tag3">UX/UI Design</a>
-    <a href="https://vizualaid.github.io/IshaKunwar/projects.html"  class="tag-bg" style="text-decoration: none; color: inherit; "  >Reset</a>
+    <a  class="filter-tag-bg" class="tag-link" data-tag="tag1">Web Development</a>
+    <a  class="filter-tag-bg" class="tag-link" data-tag="tag2">Android Development</a>
+    <a  class="filter-tag-bg" class="tag-link" data-tag="tag3">UX/UI Design</a>
+    <a href="./projects.html"  class="filter-tag-bg" style="text-decoration: none; color: inherit; "  >Reset</a>
     
     <!-- <a href="#" class="tag-bg" class="tag-link" data-tag="tag4">All</a> -->
     </div>
         
         <div class="container">
         <div class="card">
-            <img
-            src="./images/chatapp.gif"
+            <!-- <img
+            src="."
             alt="Project Image"
-            />
+            /> -->
+
+            <div class="project">
+
+                <img src="/images/chatapp.gif" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                      
+                        ChatApplication<br>
+                        
+
+                    </p>
+                    <p>
+                        ChatApplication is a sample Android application built with Android Studio and the Kotlin programming language.
+                        It uses Firebase as the backend to handle user authentication and real-time messaging.
+              
+                    </p>
+                    <a href="https://github.com/vizualaid/ChatApplication-AndroidStudio-Kotlin-Firebase-"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
             <div class="card-content">
             <h2 class="card-title">Android Chat Application
                 </h2> 
 
             <div class="tag">
-                <div class="tag-bg">Android</div>
-                <div class="tag-bg">Kotlin</div>
-                <div class="tag-bg">Firebase</div>
+                <div class="filter-tag-bg">Android Development</div>
+                <div class="filter-tag-bg">Kotlin</div>
+                <div class="filter-tag-bg">Firebase</div>
                 </div>
                 <!-- (using Android Studio-Kotlin, Firebase) -->
-            <p class="card-description">
-                ChatApplication is a sample Android application built with Android Studio and the Kotlin programming language.
-                It uses Firebase as the backend to handle user authentication and real-time messaging.</p>
-            </div>
+                <!-- <p class="card-description">
+                    ChatApplication is a sample Android application built with Android Studio and the Kotlin programming language.
+                    It uses Firebase as the backend to handle user authentication and real-time messaging.</p> -->
+          </div>
+                 
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-2.png"
             alt="Project Image"
-            />
-            <div class="card-content">
-            <h2 class="card-title">Project 2</h2>
-            <div class="tag">
-                <div class="tag-bg">Web Development</div>
-                <div class="tag-bg">Html</div>
-                <div class="tag-bg">Css</div>
+            /> -->
+            <div class="project">
 
-                <div class="tag-bg">JavaScript</div>
-                <div class="tag-bg">Bootstrap</div>
+                <img src="images/work-2.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <h1>Bharat Darshan</h1>
+                    <p class="project-head">
+                        <!-- Bharat Darshan <br> -->
+                       <i> - Heritage Website</i><br>
+                        <!-- (using HTML, CSS, JS, & Bootstrap) -->
+
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
                 </div>
-            <p class="card-description">
-                Integer vitae justo egestas nunc commodo commodo eu id enim.
-            </p>
+            </div>
+            <div class="card-content">
+            <h2 class="card-title">Heritage Website</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Web Development</div>
+                <div class="filter-tag-bg">Html</div>
+                <div class="filter-tag-bg">Css</div>
+
+                <div class="filter-tag-bg">JavaScript</div>
+                <div class="filter-tag-bg">Bootstrap</div>
+                </div>
+            <!-- <p class="card-description">
+                The project involved designing a paperless ticket booking system for heritage sites,
+                that allows visitors to easily purchase tickets and access heritage sites from home through different devices on the web.
+            </p> -->
             </div>
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-3.png"
             alt="Project Image"
-            />
-            <div class="card-content">
-            <h2 class="card-title">Project 3</h2>
-            <div class="tag">
-                <div class="tag-bg">Web Development</div>
-                <div class="tag-bg">Kotlin</div>
-                <div class="tag-bg">Firebase</div>
+            /> -->
+
+            <div class="project">
+
+                <img src="images/work-3.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                       
+                        Ecommerce Website<br>
+                    
+
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
                 </div>
-            <p class="card-description">
+            </div>
+
+            <div class="card-content">
+            <h2 class="card-title">Ecommerce website</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Web Development</div>
+                <div class="filter-tag-bg">Angular</div>
+                <div class="filter-tag-bg">Post Api</div>
+                </div>
+            <!-- <p class="card-description">
                 Aenean aliquet nisi vel ex tempus, et lacinia lectus mollis.
-            </p>
+            </p> -->
             </div>
             
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-4.png"
             alt="Project Image"
-            />
+            /> -->
+            <div class="project">
+
+                <img src="images/work-4.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <h1>DevGrid</h1>
+                    <p class="project-head">
+                        <!-- Bharat Darshan <br> -->
+                       <i> - Networking Website for Developers</i><br>         
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
             <div class="card-content">
-            <h2 class="card-title">Project 1</h2>
-            <p class="card-description">
+            <h2 class="card-title">DevGrid</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Web Development</div>
+                <div class="filter-tag-bg">React Js</div>
+                <div class="filter-tag-bg">Node Js</div>
+
+                <div class="filter-tag-bg">MongoDB</div>
+                <!-- <div class="filter-tag-bg">Bootstrap</div> -->
+                </div>
+            <!-- <p class="card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </p> -->
             </div>
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-5.png"
             alt="Project Image"
-            />
+            /> -->
+            <div class="project">
+
+                <img src="images/work-5.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                       
+                        Timetable Management  <br>
+                     
+
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
             <div class="card-content">
-            <h2 class="card-title">Project 1</h2>
-            <p class="card-description">
+            <h2 class="card-title">Timetable Management</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Android Development</div>
+                <div class="filter-tag-bg">Kotlin</div>
+                <!-- <div class="filter-tag-bg">Css</div>
+
+                <div class="filter-tag-bg">JavaScript</div>
+                <div class="filter-tag-bg">Bootstrap</div> -->
+                </div>
+            <!-- <p class="card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </p> -->
             </div>
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-6.png"
             alt="Project Image"
-            />
+            /> -->
+            <div class="project">
+
+                <img src="images/work-6.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                        Ultimate Tic-Tac-Toe using minimax algorithm<br>
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
             <div class="card-content">
-            <h2 class="card-title">Project 1</h2>
-            <p class="card-description">
+            <h2 class="card-title">Ultimate Tic-Tac-Toe</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Web Development</div>
+                <div class="filter-tag-bg">Html</div>
+                <div class="filter-tag-bg">Css</div>
+
+                <div class="filter-tag-bg">JavaScript</div>
+                <div class="filter-tag-bg">DSA</div>
+                </div>
+            <!-- <p class="card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </p> -->
             </div>
         </div>
         <div class="card">
-            <img
+            <!-- <img
             src="./images/work-7.png"
             alt="Project Image"
-            />
+            /> -->
+            <div class="project">
+
+                <img src="images/work-7.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                        C++ GUI Calculator <br>
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
             <div class="card-content">
-            <h2 class="card-title">Project 1</h2>
-            <p class="card-description">
+            <h2 class="card-title">C++ GUI Calculator</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Application</div>
+                <div class="filter-tag-bg">C++</div>
+                <div class="filter-tag-bg">GUI</div>
+                </div>
+            <!-- <p class="card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </p> -->
             </div>
         </div>
+        <div class="card">
+            <!-- <img
+            src="./images/work-8.png"
+            alt="Project Image"
+            /> -->
+            <div class="project">
+
+                <img src="images/work-8.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                        UX Flowcharts and wireframe for Uniplanner Website<br>
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card-content">
+            <h2 class="card-title"> UX Flowcharts and wireframe for Uniplanner Website</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">UX/UI Design</div>
+                <div class="filter-tag-bg">Adobe XD</div>
+                <div class="filter-tag-bg">wireframe</div>
+                </div>
+            <!-- <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p> -->
+            </div>
+        </div>
+        <div class="card">
+            <!-- <img
+            src="./images/work-9.png"
+            alt="Project Image"
+            /> -->
+            <div class="project">
+
+                <img src="images/work-9.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                        UI/UX Prototype for heritage ticket booking Website<br>
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card-content">
+            <h2 class="card-title">UI/UX Prototype </h2>
+            <div class="tag">
+                <div class="filter-tag-bg">UX/UI Design</div>
+                <div class="filter-tag-bg">Adobe XD</div>
+                <div class="filter-tag-bg">Prototype</div>
+
+                </div>
+            <!-- <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p> -->
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- <img
+            src="./images/work-10.png"
+            alt="Project Image"
+            /> -->
+            <div class="project">
+
+                <img src="images/work-10.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                        <!-- Bharat Darshan <br> -->
+                        Typing Speed Test Python GUI <br>
+                      
+
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card-content">
+            <h2 class="card-title">Typing Speed Test </h2>
+            <div class="tag">
+                <div class="filter-tag-bg">Python</div>
+                <div class="filter-tag-bg">GUI</div>
+                <div class="filter-tag-bg">Application</div>
+
+                </div>
+            <!-- <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p> -->
+            </div>
+        </div>
+        <div class="card">
+            <!-- <img
+            src="./images/work-11.png"
+            alt="Project Image"
+            /> -->
+            <div class="project">
+
+                <img src="images/work-11.png" alt=" Heritage Exploration Website">
+
+                <div class="layer">
+                    <p class="project-head">
+                       
+                        UX-UI Design website to assist students in finding housing<br>
+                    
+
+                    </p>
+                    <p>
+                        The project involved designing a paperless ticket booking system for heritage sites, <br>
+                        that allows visitors to easily purchase tickets and access heritage sites from home through
+                        different devices on the web.
+                    </p>
+                    <a href="https://vizualaid.github.io/travelwebsite.github.io/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="card-content">
+            <h2 class="card-title">UI Design Prototype</h2>
+            <div class="tag">
+                <div class="filter-tag-bg">UX/UI Design</div>
+                <div class="filter-tag-bg">Adobe XD</div>
+                <div class="filter-tag-bg">Prototype</div>
+
+                </div>
+            <!-- <p class="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p> -->
+            </div>
+        </div>
+
         </div>
     </body>
     </html>
