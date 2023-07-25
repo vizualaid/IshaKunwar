@@ -1,0 +1,517 @@
+/* width: 100%;
+height: 100vh;
+max-height: fit-content;
+overflow: hidden;
+background-image: url("images/bg.png");
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+     */
+     /* position: absolute; */
+     
+     @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+     @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+     /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300; 400; 500; 600; 700; 800; 900&display=swap'); */
+    *{
+        margin: 0;
+        /* padding-bottom: 100px; */
+        font-family: 'Tiro Devanagari Hindi', serif;
+        
+        /* box-sizing: border-box; */
+        
+    }
+    html{
+        scroll-behavior: none;
+       
+    }
+    body{ 
+        background:#ffffff;
+        /* color: #000000; */
+        min-height: 100vh;
+        position: relative;
+       
+        overflow-x: hidden;
+        /* color: black; */
+        
+    }
+    
+    .header {
+       position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        /* padding: 30px 100px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    
+       
+    }
+   
+    nav{
+        /* width: 100%;
+        margin: 0; */
+      
+        text-align: left;
+       
+    }
+    
+     
+
+
+   .navbar p{
+    font-size: 15px;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 0%;
+   }
+    .navbar a {
+        
+        display: inline-block;
+        /* background: #003329; */
+        background: #233A51;
+        color: #ffffff;
+        padding: .4rem .7rem;
+        border-radius: 1.5rem;
+        text-decoration: none;
+        margin: 10px 20px;
+        cursor: pointer;
+    }
+    .navbar a:hover, 
+    .navbar a.active {
+       
+        /* background: #5ad7be; */
+        background: #8BB5C3;
+        color: #fff;
+        padding: .4rem .7rem;
+        border-radius: 1.5rem;
+        transform: scale(1);
+        transition:0.5s ;
+    }
+ 
+
+  
+
+    .parallax{
+      background: #0a1922;
+        position: relative;
+        display: flex;
+        /* color: #ecb547; */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+    .parallax2{
+      background: #0a1922;
+        position: relative;
+        display: flex;
+        /* color: #ecb547; */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #text{
+        position: absolute;
+        padding-bottom: 20%;
+       
+        /* font-size: 15rem; */
+        
+        color: #233A51; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    }  
+    
+    .break{
+      padding: 100px;
+    }
+   
+    .box {
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+     
+      
+    }
+    .overlay {
+       z-index: 29;
+      margin-top: 30%; 
+   
+    }
+   /* */
+    .parallax img{
+        position: absolute;
+        margin-top: -100px;
+        /* bottom:30; */
+        left:10;
+        transform: scale(1.1);
+        /* transform: scale(1.1); */
+        /* height: auto; */
+        /* width: 100%; */
+        pointer-events: none;
+
+    }
+    .sec{
+        /* margin-top: 100px; */
+        /* margin-top: 10%; */
+        position: relative;
+        background: #233A51;
+        /* padding: 100px; */
+
+    }
+    .sec2{
+      /* padding: 40px; */
+      /* background-color: #f2f2f2; */
+      position: relative;
+      background: #071924;
+      /* padding: 100px; */
+     
+
+    }
+      .sec2 h2{
+          
+          font-size: 3em;
+          color: #ffffff;
+          margin-bottom: 0px;
+          padding-left: 145px;
+      /* padding-right: 120px; */
+      }
+      .sec2 p{
+          font-size: 1em;
+          color:#fff;
+          font-family: 'Questrial', sans-serif;
+      }
+
+          .sec {
+            /* padding: 40px; */
+            /* background-color: #f2f2f2; */
+            position: relative;
+            background: #0a1922;
+            /* padding: 100px; */
+          }
+      
+          h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+      
+          .para {
+            text-align: justify;
+            text-justify: inter-word;
+          }
+      
+          .para p {
+            margin-bottom: 20px;
+          }
+      
+          .para a {
+            color: #333333;
+          }
+ /* Optional styles for the video container */
+        .video-container {
+            display: none;
+            max-width: 100%;
+            margin-bottom: 20px;
+            margin-left: 1%;
+        }
+        .click{
+            font-size: 12px;
+            /* background-color: #fff; */
+            color: #0a1922;
+
+            padding: 0.3%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+             
+        
+        .container {
+          padding: 100px 100px 0 0;
+          /* font-size: large; */
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        
+        .textBox {
+          
+          background-color: #0e3248;
+          flex: 1; /* Allow the textBox to grow and fill the remaining space */
+          width: 20%;
+          padding: 50px;
+          border-radius: 1%;
+          height: 20%;
+          /* margin-right: 5%; */
+        }
+        
+        .picBox {
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          width: 40%; 
+
+          /* position: relative; */
+        }
+        
+.slider img {
+  width: 100%;
+  height: auto;
+}
+/*         
+        .slider {
+          display: flex;
+          overflow: hidden;
+        }
+        
+        .slide {
+          flex: 0 0 100%;
+          transition: transform 0.5s ease-in-out;
+        } */
+        
+        .picBox img {
+          border-radius: 2%;
+          width: 200px; /* Adjust the width as needed */
+          height: auto;
+        }
+        
+        /* Media query for screens with a maximum width of 768px */
+        @media (max-width: 768px) {
+          .sec2 h2{
+          
+            font-size: 2.5em;
+            color: #ffffff;
+            /* margin-bottom: 0px; */
+            padding-left: 15px;
+        /* padding-right: 120px; */
+        }
+          
+          .sec2{
+            /* padding: 40px; */
+            /* background-color: #f2f2f2; */
+            position: relative;
+            background: #071924;
+            /* padding: 100px; */
+            padding-left: 40px;
+            padding-right: 40px;
+      
+          }   
+        
+        .container {
+          padding: 20px 20px 0 0;
+          font-size: large;
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        
+        .textBox {
+          background-color: #0e3248;
+          font-size: medium;
+          flex: 1; /* Allow the textBox to grow and fill the remaining space */
+          width: 20%;
+          /* padding: 50px; */
+          border-radius: 1%;
+          /* height: 20%; */
+          /* margin-right: 5%; */
+        }
+        
+        .picBox {
+          margin-left: 20px;
+          width: 100%;
+          align-self: center;
+          flex-basis: 100%; /* Take up full width on smaller screens */
+          margin-left: 0; /* Remove the margin on smaller screens */
+         
+           /* Add some spacing between the textBox and the picBox */
+        }
+        
+        .picBox img {
+          border-radius: 2%;
+          width: 200px; /* Adjust the width as needed */
+          height: auto;
+        }
+
+
+        }
+        
+        
+         
+/* fog */
+
+.fog {
+    position: relative;
+    /* height: 100vh; */
+    min-height: 299vh;
+    width: 100%;
+    background: #fff;
+  }
+  
+  .fog-container {
+    /* position: absolute; */
+    width: 1400px;
+    height: 100%;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+  }
+  
+  .fog-img {
+    position: absolute;
+    height: 85.5%;
+    width: 300vw;
+    z-index: 2;
+  }
+  
+  .fog-img-first {
+    background: url("./images/fog-1.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 60s linear infinite;
+  }
+  
+  .fog-img-second {
+    background: url("./images/fog-2.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 30s linear infinite;
+  }
+.next2{
+    margin-bottom: 0%;
+    /* margin-bottom: 0%;
+    margin-top: -10%; */
+  }
+ 
+  .nex{
+    margin-bottom: -100%;
+   }
+  .next12{
+    margin-bottom: 10%;
+    /* margin-bottom: 0%;
+    margin-top: -10%; */
+  }
+  .next{
+    /* margin-bottom: -69%; */
+    margin-bottom: 0%;
+    /* margin-top: -10%; */
+  }
+  .next1{
+    /* margin-bottom: -69%; */
+    margin-bottom: 0%;
+    
+  transform: scale(1.1);
+  transition:1.9s ;
+    /* margin-top: -10%; */
+  }
+  .sec2 h2{
+    margin-top: 29%;
+  
+  }
+
+  
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(-200vw, 0, 0);
+    }
+  }
+/*fog end  */
+        .parallax-fog{
+            position: absolute;
+            width: 100vh;
+            height: 100%;
+            z-index: 1;
+            left:0;
+            top:0;
+            background:url('./images/fog.jpg') repeat-x;
+            background-size: 200% auto;
+            background-position: 0 bottom;
+            animation: fogAnim 60s;
+            animation-timing-function: Linear;
+            animation-iteration-count: infinite;    
+
+        }
+        @keyframes fogAnim{
+            0%{ background-position: -200% bottom }
+            100% { background-position: -0% bottom }
+            
+        }
+
+        .container {
+                  text-align: justify;
+                  /* position: relative; */
+        }
+        .textBox{
+          position: relative;
+        }
+
+        .textBox p {
+          /* background-color: #0e3248; */
+          font-size: 20px;
+          /* text-align: justify; */
+          
+        }
+
+        
+        
+        #eng ,#eng2, #eng3,#eng4{
+          display: block;
+          font-size: small;
+        }
+        
+        #hindi, #hindi2, #hindi3,#hindi4 {
+          display: none;
+          font-size: small;
+        }
+   
+       
+        .filter-tag-bg{
+          font-size: small;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: #0a1922;
+          font-size: small;
+            border-radius: 25px;
+            padding: 10px;
+            margin: 10px;
+            
+            width: fit-content;
+            display: inline-block;         
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .voice{
+          font-size: small;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #0a1922;
+          /* font-size: small; */
+            border-radius: 10%;
+            padding-left: 1%;
+            padding-right: 0.87%;
+            padding-top: 0.5%;
+            /* margin: 10px; */
+            
+            width: fit-content;
+            display: inline-block;         
+            margin-bottom: 5px;
+            cursor: pointer;
+            /* border-radius: 25px; */
+            padding: 13px;
+            margin: 10px;
+        }
+
+        .filter-tag-bg:hover {
+         color: #071924;
+          background-color: #ccc;
+        }
