@@ -1,153 +1,98 @@
+let isSpeaking = false;
+let speech;
+let textvoice;
+
 function toggleLanguage() {
-    var engParagraph = document.getElementById("eng");
-    var hindiParagraph = document.getElementById("hindi");
-    var engParagraph2 = document.getElementById("eng2");
-    var hindiParagraph2 = document.getElementById("hindi2");
-    var engParagraph3 = document.getElementById("eng3");
-    var hindiParagraph3 = document.getElementById("hindi3");
-    var engParagraph4 = document.getElementById("eng3");
-    var hindiParagraph4 = document.getElementById("hindi3");
+    const engParagraphs = document.querySelectorAll('[id^="eng"]');
+    const hindiParagraphs = document.querySelectorAll('[id^="hindi"]');
 
-  
-    if (engParagraph.style.display === "none") {
-      engParagraph.style.display = "block";
-      hindiParagraph.style.display = "none";
-      engParagraph2.style.display = "block";
-      hindiParagraph2.style.display = "none";
-      engParagraph3.style.display = "block";
-      hindiParagraph3.style.display = "none";
-      engParagraph4.style.display = "block";
-      hindiParagraph4.style.display = "none";
-      
-    } else {
-      engParagraph.style.display = "none";
-      hindiParagraph.style.display = "block";
-      engParagraph2.style.display = "none";
-      hindiParagraph2.style.display = "block";
-      engParagraph3.style.display = "none";
-      hindiParagraph3.style.display = "block";
-      engParagraph4.style.display = "none";
-      hindiParagraph4.style.display = "block";
+    // Toggle display for English and Hindi paragraphs
+    for (let i = 0; i < 1; i++) {
+        if (engParagraphs[i].style.display === "none") {
+            engParagraphs[i].style.display = "block";
+            hindiParagraphs[i].style.display = "none";
+        } else {
+            engParagraphs[i].style.display = "none";
+            hindiParagraphs[i].style.display = "block";
+        }
     }
-  }
-  
-  let isSpeaking = false;
-  let speech;
-  let textvoice;
-  
-  function voice(a) {
-   if(a===1)
-   {
+}
+
+function voiceEnglish(a) {
+    if (a === 1) {
         engParagraph = document.getElementById("eng");
-        hindiParagraph = document.getElementById("hindi");
+    } else if (a === 2) {
+        engParagraph = document.getElementById("eng2");
+    } else if (a === 3) {
+        engParagraph = document.getElementById("eng3");
+    } else if (a === 4) {
+        engParagraph = document.getElementById("eng4");
     }
-   else if(a===2)
-   {
-    engParagraph = document.getElementById("eng2");
-    // hindiParagraph = document.getElementById("hindi2");
-    
-   }
-   else if(a===3)
-   {
-    engParagraph = document.getElementById("eng3");
-    // hindiParagraph = document.getElementById("hindi3");
-    
-   }
-   else if(a===4)
-   {
-    engParagraph = document.getElementById("eng4");
-    // hindiParagraph = document.getElementById("hindi4");
-    
-   }
 
+    if (engParagraph.style.display !== "none") {
+        if (a === 1) {
+            textvoice = document.getElementById("eng").innerText;
+        } else if (a === 2) {
+            textvoice = document.getElementById("eng2").innerText;
+        } else if (a === 3) {
+            textvoice = document.getElementById("eng3").innerText;
+        } else if (a === 4) {
+            textvoice = document.getElementById("eng4").innerText;
+        }
 
-    if(engParagraph.style.display!=="none")
-    {
-        if(a===1)
-    {
-        textvoice = document.getElementById("eng").innerText;
-        
-    }
-    else if(a===2)
-    {
-        textvoice = document.getElementById("eng2").innerText;
-        
-    }
-    else if(a===3)
-    {
-        textvoice = document.getElementById("eng3").innerText;
-        
-    }
-    else if(a===4)
-    {
-        textvoice = document.getElementById("eng4").innerText;
-        
-    }
-       
         if (!isSpeaking) {
-
             if ('speechSynthesis' in window) {
                 speech = new SpeechSynthesisUtterance(textvoice);
                 speech.lang = 'en';
                 speech.rate = 1.1;
                 speech.volume = 2;
-    
-                speech.onend = function() {
+                speech.onend = function () {
                     isSpeaking = false;
                 };
-    
                 window.speechSynthesis.speak(speech);
                 isSpeaking = true;
             } else {
                 console.log('Speech synthesis is not supported.');
                 isSpeaking = true;
-                
-    
             }
-        }
-        else {
-            if (window.speechSynthesis.speaking) {
-                window.speechSynthesis.cancel();
-                isSpeaking = false;
-            }
-        }
-
-    }
-    else
-    {
-        textvoice = document.getElementById("hindi").innerText;
-        if (!isSpeaking) {
-
-            if ('speechSynthesis' in window) {
-                speech = new SpeechSynthesisUtterance(textvoice);
-                speech.lang = 'hi';
-                speech.rate = 1.1;
-                speech.volume = 2;
-        
-                speech.onend = function() {
-                    isSpeaking = false;
-                };
-        
-                window.speechSynthesis.speak(speech);
-                isSpeaking = true;
-            } else {
-                console.log('Speech synthesis is not supported.');
-                isSpeaking = true;
-                
-        
-            }
-        }
-        else {
+        } else {
             if (window.speechSynthesis.speaking) {
                 window.speechSynthesis.cancel();
                 isSpeaking = false;
             }
         }
     }
-
-   
-
 }
+
+function voiceHindi() {
+    textvoice = document.getElementById("hindi").innerText;
+
+    if (!isSpeaking) {
+        if ('speechSynthesis' in window) {
+            speech = new SpeechSynthesisUtterance(textvoice);
+            speech.lang = 'hi';
+            speech.rate = 1.1;
+            speech.volume = 2;
+            speech.onend = function () {
+                isSpeaking = false;
+            };
+            window.speechSynthesis.speak(speech);
+            isSpeaking = true;
+        } else {
+            console.log('Speech synthesis is not supported.');
+            isSpeaking = true;
+        }
+    } else {
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+            isSpeaking = false;
+        }
+    }
+}
+
+
+// Add the rest of your JavaScript code below, such as scrolling functionality.
+
 
 // }
   
