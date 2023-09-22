@@ -16,12 +16,13 @@
             text-decoration-color: white;
         }
         @media (max-width: 768px) {
-            body {
-            padding: 0;
+          
 
         }
-
-        }
+        #navbar.blur {
+    backdrop-filter: blur(8 px); /* Add your blur settings here */
+    transition: backdrop-filter 0.1s ease; /* Change this line to adjust transition speed */
+}
         
     </style>
 
@@ -113,9 +114,9 @@
                 <div class="about-col-1">
                     <img src="images/user.png" alt="user">
                 </div>
-                <div class="about-col-2" style="padding-top: 20px;">
+                <div class="about-col-2" style="padding-top: 10px;">
                     <h2 class="sub-title sub-title1">About Me</h2>
-                    <p  >
+                    <p style="padding-top: 20px;" >
                         From the finesse of front-end flair to back-end <BR> wizardry, 
                         my passion knows no bounds. Guided <BR> by algorithms and fueled with boundless creativity, <BR><strong> I love to code, debug, and create </strong>🚀
                         <!-- As a Computer Science and Engineering student, I have a passion for coding and design.
@@ -149,9 +150,9 @@
                                     <a style="margin: 2px; font-size:9px; margin-left: 20px; border-radius: 5px; padding: 5px; text-decoration: none; color: aliceblue; background-color:rgb(255, 0, 47);" href="https://www.codechef.com/users/ishakunwar"> codechef  </a>
                                 </div>
                                 <li >
-                                    <a style="margin-left: 0px; font-size:8px; border-radius: 5px; padding: 2px; text-decoration: none; color:rgb(0, 0, 0); color: rgb(253, 255, 107);" href="https://codeforces.com/profile/ishakunwar"> (max. pupil, 1069) </a>
-                                    <a style="font-size:7px; border-radius: 5px; padding: 2px; text-decoration: none; margin-left: 20px; color:rgb(0, 0, 0); color:rgb(0, 72, 255);" href="https://leetcode.com/ishakunwar/"> (max. 1,653) </a> 
-                                    <a style="font-size:7px; border-radius: 5px; padding: 2px; text-decoration: none; margin-left: 20px; color:rgb(0, 0, 0); color:rgb(255, 0, 47);" href="https://www.codechef.com/users/ishakunwar"> (max. 1599, ⭐⭐)  </a>
+                                    <a style="margin-left: 0px; font-size:8px; border-radius: 5px; padding: 2px; text-decoration: none; color:rgb(0, 0, 0); color: rgb(253, 255, 107);" href="https://codeforces.com/profile/ishakunwar"> (max. pupil, <strong>1069</strong>) </a>
+                                    <a style=" font-size:9px;  padding: 2px; text-decoration: none; margin-left: 10px; color:rgb(0, 0, 0); color:rgb(0, 72, 255);" href="https://leetcode.com/ishakunwar/"><strong> (max. 1669)</strong> </a> 
+                                    <a style="font-size:9px; border-radius: 5px; padding: 2px; text-decoration: none; margin-left: 20px; color:rgb(0, 0, 0); color:rgb(255, 0, 47);" href="https://www.codechef.com/users/ishakunwar"> (max.<strong> 1599</strong> , ⭐⭐)  </a>
                                 </li>
                                 <!-- <div style="margin-top: 5px;">                                        
                                     <li>
@@ -231,6 +232,7 @@
                     <!--  about-col-2   -->
                 </div>
                 <!-- row -->
+                
             </div>
         </div>
     </div>
@@ -392,7 +394,7 @@
                 </div>
         </div>
     </div>
-    <div class="copyright">created with love <i class="fas fa-heart"></i> Isha Kunwar ©  </div>
+    <div class="copyright">Coded & Designed with love <i class="fas fa-heart"></i> ©Isha Kunwar   </div>
         <script>
             var navbar = document.getElementById("navbar")
             var sidemenu=document.getElementById("sidemenu")
