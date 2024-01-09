@@ -143,15 +143,32 @@ function voiceHindi() {
 
                
                 sec2.style.marginTop = value * -0.6 + 'px' 
-
-                x1.style.marginBottom = value * 1.5 + 'px' 
+                if (window.matchMedia('(min-width: 1440px) and (min-height: 900px)').matches) {
+                    x1.style.marginBottom = value * 1.5 + 'px';
+                    x2.style.right = value * 0.0 + 'px'
+                    x1.style.left = value * - 0.2 + 'px' 
+                    a2.style.marginTop= value* -4.5+'px'
+                    a3.style.marginTop= value* -4.3+'px'
+                    a4.style.marginTop= value* -1.0+'px'
+                    a1.style.transform= value* 0.6+'px'
+                    a2.style.transform= value* 1.0+'px'
+                } else {
+                    x1.style.marginBottom = value * 1.5 + 'px';
+                    x2.style.right = value * 0.1 + 'px'
+                x1.style.left = value * 0.1 + 'px' 
+                a2.style.marginTop= value* -1.6+'px'
+                a3.style.marginTop= value* -1.3+'px'
+                a4.style.marginTop= value* -1.0+'px'
+                a1.style.transform= value* 0.6+'px'
+                a2.style.transform= value* 1.0+'px'
+                }
+             
                    
                 x2.style.marginBottom = value * 1.5 + 'px'
                 
                 x3.style.marginBottom = value * 1.5 + 'px'
-
-                x1.style.left = value * 0.1 + 'px'    
-                x2.style.right = value * 0.1 + 'px'
+   
+               
                 
                 x3.style.left = value * 0.1 + 'px'
                 a1.style.marginTop= value* -0.8+'px'

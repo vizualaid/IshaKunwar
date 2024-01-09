@@ -35,6 +35,26 @@ position: relative;
         /* color: black; */
         
     }
+    /* 1366*768 */
+   
+      @media screen and (min-width: 1260px) and (min-height: 580px) {
+        body {
+            zoom: 110%; /* You can adjust this value based on your preference */
+        }
+      }
+      @media screen and (min-width: 1260px) and (min-height: 580px) and (max-width: 1399px) and (max-height: 899px) {
+        body {
+            zoom: 110%; /* Adjust this value based on your preference */
+        }
+    }
+    
+    @media screen and (min-width: 1400px) and (min-height: 900px) {
+        body {
+            zoom: 160%; /* Adjust this value based on your preference */
+        }
+    }
+      
+       
     
     .header {
        position: absolute;
@@ -372,6 +392,11 @@ position: relative;
     width: 300vw;
     z-index: 2;
   }
+  @media screen and (min-width: 1440px) and (min-height: 900px) {
+    .fog-img {
+       height: 73.8%;      
+    }
+    }
   
   .fog-img-first {
     background: url("./images/fog-1.png");
@@ -413,6 +438,7 @@ position: relative;
     
   transform: scale(1.1);
   transition:1.9s ;
+  
     /* margin-top: -10%; */
   }
   .sec2 h2{
